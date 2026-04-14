@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analyzer</title>
+</head>
+<body>
+
+<h2>Sentiment Analysis App</h2>
+
+<input type="text" id="text" placeholder="Enter text">
+<button onclick="predict()">Predict</button>
+
+<h3 id="result"></h3>
+
+<script>
+function predict() {
+    let text = document.getElementById("text").value;
+
+    fetch("http://127.0.0.1:8000/predict?text=" + encodeURIComponent(text), {
+        method: "POST",
+        mode: "cors"
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then(data => {
+        document.getElementById("result").innerHTML =
+        "Sentiment: " + data.sentiment +
+        "<br>Confidence: " + (data.confidence * 100).toFixed(2) + "%";
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("API not working");
+    });
+}
+</script>
+
+</body>
+</html>
