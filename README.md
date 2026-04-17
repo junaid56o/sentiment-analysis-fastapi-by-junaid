@@ -16,11 +16,11 @@ This is a full-stack machine learning web application that predicts the sentimen
 - HTML, JavaScript
 
 ## Project Structure
-├── app.py
-├── index.html
-├── sentiment_model.pkl
-├── vectorizer.pkl
-├── requirements.txt
+├── app.py...... 
+├── index.html..... 
+├── sentiment_model.pkl..... 
+├── vectorizer.pkl..... 
+├── requirements.txt.... 
 
 ## How to Run
 
