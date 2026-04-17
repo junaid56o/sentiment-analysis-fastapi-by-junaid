@@ -30,7 +30,7 @@ This is a full-stack machine learning web application that predicts the sentimen
 
 ## Example
 Input: I love this product  
-Output: Positive (Confidence: 0.90)
+Output: Positive (Confidence: 0.97)
 
 ## 📸 Screenshot
 
